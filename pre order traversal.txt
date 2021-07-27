@@ -1,0 +1,8 @@
+ static void preorder(Node root)
+    {
+        // Code here
+        if(root!=null){
+System.out.print(root.data+" ");
+preorder(root.left);
+preorder(root.right);
+}

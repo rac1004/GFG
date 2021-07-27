@@ -1,0 +1,18 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+	     Scanner scan = new Scanner(System.in);
+        int t = scan.nextInt();
+        while(t-- > 0){
+            String s = scan.nextLine().trim();
+            if(s.isEmpty())
+                s = scan.nextLine().trim();
+            int pos = s.lastIndexOf(" ");
+            System.out.println((s.length()-pos-1));
+        }
+	}
+		//code
+	}

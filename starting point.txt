@@ -1,0 +1,25 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		Scanner sc= new Scanner(System.in);
+		int t= sc.nextInt();
+		while(t-->0){
+		    int curx= sc.nextInt();
+		    int cury= sc.nextInt();
+		    int len= sc.nextInt();
+		    int sumx=0,sumy=0;
+		    for(int i=0;i<len;i++){
+		        sumx+= sc.nextInt();
+		        sumy+= sc.nextInt();
+		    }
+		    System.out.println((curx-sumx)+" "+(cury-sumy));
+		    
+		}
+	}
+}

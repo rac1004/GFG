@@ -1,0 +1,20 @@
+A Binary Tree node
+class Node {
+    int data;
+    Node left, right;
+   Node(int item)    {
+        data = item;
+        left = right = null;
+    }
+class Tree
+{
+    void postOrder(Node root)
+    {
+        if(root != null){
+postOrder(root.left);
+postOrder(root.right);
+System.out.print(root.data+" ");
+}
+       // Your code goes here
+    }
+}

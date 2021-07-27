@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    long int n,k,money=0;
+	    cin>>n>>k;
+	    for(long int i=k;i<=n;i+=k)
+	    {
+	            money+=i;
+	    }
+	    if(money!=0)
+	    cout<<money<<endl;
+	    else
+	    cout<<0<<endl;
+	}
+	return 0;
+}

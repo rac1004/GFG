@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n,x;
+        cin >> n;
+        int a[n];
+        for(int i=0;i<n;i++)
+        {
+            cin >> a[i];
+        }
+        cin >> x;
+        int i,res=-1;
+        for(i=0;i<n;i++)
+        {
+            if(x==a[i])
+            {
+                res = i;
+                break;
+            }
+        }
+        cout << res << " ";
+        cout << "\n";
+    }
+	return 0;
+}

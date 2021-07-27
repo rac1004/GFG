@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int check_AND(int arr[],int num_of_digits)
+{
+int flag;
+for (int i = 0; i < num_of_digits ; i++)
+{
+if (arr[i]==0)
+{
+flag = 0;
+break;
+}
+else
+flag = 1;
+}
+return flag;
+}
+
+int main() {
+int test;
+scanf("%d",&test);
+while(test--)
+{
+int n,val;
+scanf("%d",&n);
+int bin[n];
+for (int i = 0; i < n ; i++)
+scanf("%d",&bin[i]);
+val = check_AND(bin,n);
+printf("%d\n",val);
+}
+return 0;
+}

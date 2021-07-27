@@ -1,0 +1,29 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+int T;
+cin>>T;
+
+while(T--){
+
+string s;
+cin>>s;
+
+sort(s.begin(),s.end());
+
+bool flag=false;
+for(int i=0;i<s.length()-1;i++)
+{
+ if(s.at(i+1)==s.at(i))
+ { 
+     flag=true; break;
+ } 
+    
+}
+ if(flag)
+ cout<<"0"<<"\n";
+ else 
+cout<<"1"<<"\n"; } }
