@@ -1,0 +1,71 @@
+Given a rope of length n meters, cut the rope in different parts of integer lengths in a way that maximizes product of lengths of all parts. You must make at least one cut.
+
+Input:
+
+The first line of input contains an integer T denoting the number of test cases.
+The first line of each test case is length of rope denoted by N.
+
+Output:
+
+Print the maximizes product of lengths of all parts.
+
+Constraints:
+
+1 ≤ T ≤ 50
+1 ≤ N ≤ 100
+
+Example:
+
+Input:
+2
+2
+5
+
+Output:
+1
+6
+ 
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t > 0)
+	{
+	    t--;
+	    int n;
+	    cin>>n;
+	    if(n == 2)
+	    {
+	        cout<<1<<endl;
+	        continue;
+	    }
+	    else if(n == 3)
+	    {
+	        cout<<2<<endl;
+	        continue;
+	    }
+	    int a  = 0;
+	    int b = 0; 
+	    while(n > 0)
+	    {
+	        if(n%3 != 0)
+	        {
+	            n = n - 2;
+	            a++;
+	        }
+	        else
+	        {
+	            n = n - 3;
+	            b++;
+	        }
+	    }
+	    long long int c = pow(2, a)*pow(3, b);
+	    cout<<c<<endl;
+	}
+	return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int t;
+cin>>t;
+
+while(t--)
+{
+int a;
+cin>>a;
+
+int m = ( (1<<8)-1 );
+int k = ((a<<27)>>23)&m ;
+int l = a>>4;
+cout<< (int)(k|l)<<endl; } return 0;
+}

@@ -1,0 +1,31 @@
+A Binary Tree node
+class Node
+{
+    int data;
+    Node left, right;
+
+    Node(int item)
+    {
+        data = item;
+        left = right = null;
+    }
+}
+
+class Tree
+{
+	boolean isSumTree(Node node)
+{
+if(node==null || node.left==null && node.right==null)return true;
+
+
+if(add(node.left)+add(node.right)==node.data)
+{
+return (isSumTree(node.left) && isSumTree(node.right));
+}
+else return false;
+}
+static int add(Node node)
+{
+if(node==null)return 0;
+return (add(node.left)+add(node.right)+node.data);}
+}

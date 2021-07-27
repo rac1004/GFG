@@ -1,0 +1,25 @@
+Node mergeResult(Node m, Node n)
+{
+Node t = merge(m,n);
+Node p = null;
+while(t != null){
+Node nt = t.next;
+t.next = p;
+p = t;
+t = nt;
+}
+return p;
+}
+
+Node merge(Node m, Node n){
+if(m == null) return n;
+if(n == null) return m;
+
+if(m.data < n.data){
+m.next = merge(m.next,n);
+return m;
+}else{
+n.next = merge(m,n.next);
+return n;
+}
+}

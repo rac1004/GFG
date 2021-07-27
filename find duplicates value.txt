@@ -1,0 +1,17 @@
+void printDuplicates(int a[], int n) {
+    // add code here.
+    int c=1;
+    for(int i=0; i<n; ++i){
+        int ind = a[i] % n;
+        a[ind] += n;
+    }
+    
+    for(int i=0; i<n; ++i){
+        if(a[i]/n > 1){
+            cout<<i<<" ";
+            c =0;
+        }
+    }
+    
+    if(c) cout<<"-1";
+}

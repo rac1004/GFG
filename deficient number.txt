@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+//code
+int t;
+cin>>t;
+while(t--){
+int x,s=0,t;
+cin>>x;
+int k=sqrt(x);
+for(int i=1;i<=k;i++){
+if(x%i==0)
+s=s+i+(x/i);
+}
+if(k*k==x)
+s=s-k;
+t=(2*x)-s;
+if(t<=0)
+cout<<"0"<<endl; 
+else cout<<"1"<<endl; } return 0; }
